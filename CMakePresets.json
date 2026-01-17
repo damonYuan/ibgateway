@@ -1,0 +1,37 @@
+{
+  "version": 10,
+  "configurePresets": [
+    {
+      "name": "common",
+      "hidden": true,
+      "generator": "Ninja",
+      "binaryDir": "${sourceDir}/build/${presetName}"
+    },
+    {
+      "name": "MacDebug",
+      "displayName": "MacOS Debug",
+      "description": "MacOS Debug preset",
+      "inherits": "common",
+      "toolchainFile": "~/.vcpkg-clion/vcpkg-twsapicpp/scripts/buildsystems/vcpkg.cmake",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Debug",
+        "CMAKE_INSTALL_PREFIX": "${sourceDir}/install/debug",
+        "CMAKE_MAKE_PROGRAM": "/Applications/CLion.app/Contents/bin/ninja/mac/x64/ninja"
+      },
+      "condition": {
+        "type": "equals",
+        "lhs": "${hostSystemName}",
+        "rhs": "Darwin"
+      }
+    }
+  ],
+  "buildPresets": [
+    {
+      "name": "MacDebug-Build",
+      "displayName": "Build MacOS Debug",
+      "configurePreset": "MacDebug",
+      "configuration": "Debug",
+      "jobs": 8
+    }
+  ]
+}

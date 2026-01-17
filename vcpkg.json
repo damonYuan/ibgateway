@@ -1,0 +1,19 @@
+{
+  "name": "twsapicpp",
+  "version-string": "1.0.0",
+  "builtin-baseline": "66c0373dc7fca549e5803087b9487edfe3aca0a1",
+  "dependencies": [
+    {
+      "name": "intelrdfpmathlib",
+      "version>=": "20U2#6"
+    },
+    {
+      "name": "vcpkg-cmake",
+      "version>=": "2024-04-23"
+    },
+    {
+      "name": "protobuf",
+      "version>=": "5.29.5#3"
+    }
+  ]
+}
