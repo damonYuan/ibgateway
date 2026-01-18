@@ -40,7 +40,7 @@ add_custom_target(proto_gen ALL
 file(GLOB SOURCES "${CMAKE_SOURCE_DIR}/lib/cppclient/client/*.cpp")
 file(GLOB HEADERS "${CMAKE_SOURCE_DIR}/lib/cppclient/client/*.h")
 file(GLOB PROTO_SOURCES "${PROTO_GEN_DIR}/*.cc")
-file(GLOB PROTO_HEADERS "c${PROTO_GEN_DIR}/*.h")
+file(GLOB PROTO_HEADERS "${PROTO_GEN_DIR}/*.h")
 add_library(twsapi SHARED
         ${SOURCES}
         ${PROTO_SOURCES})
