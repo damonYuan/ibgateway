@@ -60,6 +60,7 @@ set_target_properties(twsapi
         DEBUG_POSTFIX "d"
         LIBRARY_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}"
         PUBLIC_HEADER "${HEADERS};${PROTO_HEADERS}"
+        VERSION "9.79.02"
 )
 
 add_executable(ibgateway src/main.cpp)
