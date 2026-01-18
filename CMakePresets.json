@@ -16,7 +16,8 @@
       "cacheVariables": {
         "CMAKE_BUILD_TYPE": "Debug",
         "CMAKE_INSTALL_PREFIX": "${sourceDir}/install/debug",
-        "CMAKE_MAKE_PROGRAM": "/Applications/CLion.app/Contents/bin/ninja/mac/x64/ninja"
+        "CMAKE_MAKE_PROGRAM": "/Applications/CLion.app/Contents/bin/ninja/mac/x64/ninja",
+        "CMAKE_VERBOSE_MAKEFILE": "ON"
       },
       "condition": {
         "type": "equals",
@@ -31,7 +32,12 @@
       "displayName": "Build MacOS Debug",
       "configurePreset": "MacDebug",
       "configuration": "Debug",
-      "jobs": 8
+      "jobs": 8,
+      "condition": {
+        "type": "equals",
+        "lhs": "${hostSystemName}",
+        "rhs": "Darwin"
+      }
     }
   ]
 }

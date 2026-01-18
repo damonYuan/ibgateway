@@ -23,7 +23,7 @@ find_program(PROTOC_EXECUTABLE
 
 set(PROTO_DIR "${CMAKE_SOURCE_DIR}/lib/cppclient/proto")
 file(GLOB PROTO_FILES "${PROTO_DIR}/*.proto")
-set(PROTO_GEN_DIR "${CMAKE_SOURCE_DIR}/lib/cppclient/client/protobufUnix")
+set(PROTO_GEN_DIR "${CMAKE_BINARY_DIR}/protobufUnix")
 file(MAKE_DIRECTORY ${PROTO_GEN_DIR})
 
 add_custom_target(proto_gen ALL
